@@ -4,10 +4,16 @@ const { Routes } = require('discord-api-types/v9');
 const token = process.env['token']
 const CLIENT_ID = process.env['CLIENT_ID']
 const GUILD_ID = process.env['GUILD_ID']
-const commands = [{
-  name: 'ping',
-  description: 'Replies with Pong!'
-}]; 
+const commands = [
+  {
+    name: 'github',
+    description: 'Replies with github link'
+  },
+  {
+    name:'hello',
+    description: 'Introduce myself'
+  }
+  ]; 
 
 const rest = new REST({ version: '9' }).setToken(token);
 
