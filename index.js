@@ -12,6 +12,14 @@ const commands = [
   {
     name:'hello',
     description: 'Introduce myself'
+  },
+  {
+    name:'inspire',
+    description: 'Respond with inspirational quote'
+  },
+  {
+    name:'commands',
+    description: 'List all of my commands'
   }
   ]; 
 
