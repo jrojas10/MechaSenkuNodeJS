@@ -10,7 +10,10 @@ Discord bot
 
 /inspire - random quote
 
-$aniquote- random anime quote
+/punch - anime punch
+
+/kill - anime kill
+
 
 ```
 

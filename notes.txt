@@ -1,2 +1,11 @@
 --have to reload index.js everytime lists of commands are updated
 -- in package.json change main property to index.js to reload commands then change back to bot.js to run bot
+-- change type module to use require when running index.js
+
+ideas
+
+api madlibs
+
+const API = require('anime-images-api')
+const images_api = new API() 
+

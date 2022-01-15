@@ -3,6 +3,10 @@ import {Client, Intents} from "discord.js"
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 import fetch from "node-fetch"
 const token = process.env['token']
+import API from "anime-images-api"
+
+
+const images_api = new API() ;
 
 
 function getQuote(){
@@ -14,7 +18,9 @@ function getQuote(){
     return data[0]["q"] + " -" + data[0]["a"]
   })
 }
-function testq(){
+
+
+function getPunch(){
   return "test quote"
 }
 
@@ -37,6 +43,12 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'commands') {
     await interaction.reply('https://github.com/jrojas10/MechaSenkuNodeJS/blob/main/README.md');
   }
+  if (interaction.commandName === 'punch') {
+    await images_api.sfw.punch().then (response => interaction.reply(response.image));
+  }
+  if (interaction.commandName === 'kill') {
+    await images_api.sfw.kill().then (response => interaction.reply(response.image));
+  }
 
 
 
@@ -44,10 +56,5 @@ client.on('interactionCreate', async interaction => {
 
 
 });
-client.on("message", msg =>{
-  if (msg.content === "ping"){
-    msg.reply("pong")
-  }
-})
 
 client.login(token);

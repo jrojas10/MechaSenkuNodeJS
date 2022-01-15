@@ -1,9 +1,10 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 
-const token = process.env['token']
-const CLIENT_ID = process.env['CLIENT_ID']
-const GUILD_ID = process.env['GUILD_ID']
+
+const token = process.env['token'];
+const CLIENT_ID = process.env['CLIENT_ID'];
+const GUILD_ID = process.env['GUILD_ID'];
 const commands = [
   {
     name: 'github',
@@ -20,6 +21,14 @@ const commands = [
   {
     name:'commands',
     description: 'List all of my commands'
+  },
+  {
+    name:'punch',
+    description: 'Responds with anime punch gif'
+  },
+  {
+    name:'kill',
+    description: 'Responds with anime kill gif'
   }
   ]; 
 
