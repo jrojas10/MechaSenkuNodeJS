@@ -1,11 +1,11 @@
 // const { Client, Intents } = require('discord.js');
 import {Client, Intents} from "discord.js"
+import keepAlive from "./server.js"
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 import fetch from "node-fetch"
 const token = process.env['token']
+
 import API from "anime-images-api"
-
-
 const images_api = new API() ;
 
 
@@ -56,5 +56,5 @@ client.on('interactionCreate', async interaction => {
 
 
 });
-
+keepAlive()
 client.login(token);
